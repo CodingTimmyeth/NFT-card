@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap');
+
+:root {
+    --Soft-Blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Main-Very-Dark-Blue: hsl(217, 54%, 11%);
+    --Card-Very-Dark-Blue: hsl(216, 50%, 16%);
+    --Very-Dark-Blue: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--Main-Very-Dark-Blue);
+    color: var(--White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+}
+
+main {
+    width: 327px;
+    height: auto;
+    padding: 25px 24px;
+    background-color: var(--Card-Very-Dark-Blue);
+    border-radius: 21px;
+
+}
+
+.top {
+    position: relative;
+}
+
+.top>img {
+    background: url('/images/image-equilibrium.jpg') center center/ cover;
+    width: 100%;
+    height: 302px;
+    border-radius: 21px;
+    margin-bottom: 28px;
+    transition: all .3s;
+
+}
+
+.view-icon {
+    top: 0;
+    width: 100%;
+    height: 302px;
+    border-radius: 21px;
+    position: absolute;
+    background-color: hsl(178, 100%, 50%, 30%);
+    opacity: 0;
+    transition: 0.3s all;
+}
+
+.view-icon>img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.view-icon:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.title {
+    width: fit-content;
+}
+
+.title:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.subtitle {
+    color: var(--Soft-Blue);
+    font-weight: 300;
+    font-size: 17px;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+    color: var(--Cyan);
+}
+
+.price {
+    display: flex;
+    width: 100%;
+}
+
+.price>img {
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.time {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    color: var(--Soft-Blue);
+}
+
+.time>img {
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid var(--Very-Dark-Blue);
+    margin-bottom: 1rem;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile>img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.profile>p {
+    color: var(--Soft-Blue);
+}
+
+.profile>p>span {
+    color: white;
+}
+
+.profile>p>span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+}
+
+footer>a {
+    color: var(--Cyan);
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 375px) {
+    footer {
+        bottom: 10px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    footer {
+        display: none;
+    }
+}
